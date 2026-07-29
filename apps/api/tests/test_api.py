@@ -1,6 +1,10 @@
 import pytest
 from httpx import AsyncClient, ASGITransport
 from app.main import app
+import os
+
+# Override database URL to use SQLite for tests
+os.environ['DATABASE_URL'] = 'sqlite+aiosqlite:///./test.db'
 
 
 @pytest.fixture
