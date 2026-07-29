@@ -1,19 +1,36 @@
-node_modules/
-dist/
-.next/
+```gitignore
+# Python
 __pycache__/
 *.pyc
-.env
-.env.local
-*.egg-info/
-.pytest_cache/
-alembic/versions/*.pyc
-data/uploads/
 *.pyo
+*.pyd
+
+# Dependencies
 .venv/
 venv/
+env/
+.env
+.env.local
+.env.*
+
+# Uploads and data
+apps/api/data/uploads/
+
+# Logs
+*.log
+
+# Coverage
+.coverage
+coverage/
+htmlcov/
+
+# IDE
 .vscode/
 .idea/
-*.log
+*.swp
+*.swo
+
+# OS
 .DS_Store
 Thumbs.db
+```

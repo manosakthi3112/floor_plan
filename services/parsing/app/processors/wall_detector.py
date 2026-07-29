@@ -102,7 +102,11 @@ def _detect_from_image_vectorization(image: np.ndarray) -> list[dict]:
     )
     if lines is not None:
         for line in lines:
-            x1, y1, x2, y2 = line[0]
+            # Handle both nested [[x1,y1,x2,y2]] and flat [x1,y1,x2,y2] formats
+            if isinstance(line[0], np.ndarray):
+                x1, y1, x2, y2 = line[0]
+            else:
+                x1, y1, x2, y2 = line
             length = math.hypot(x2 - x1, y2 - y1)
             if length >= 15.0:
                 raw_segments.append({
