@@ -1,4 +1,9 @@
 ```
+# Build artifacts
+dist/
+build/
+target/
+
 # Dependencies
 node_modules/
 venv/
@@ -6,27 +11,24 @@ venv/
 __pycache__/
 .mypy_cache/
 .pytest_cache/
-dist/
-build/
-target/
 .gradle/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
 
 # Logs and temp files
 *.log
 *.tmp
-*.swp
-*.swo
 
 # Environment
 .env
 .env.local
 *.env.*
 
-# Editors
-.vscode/
-.idea/
-
-# OS
+# System files
 .DS_Store
 Thumbs.db
 
